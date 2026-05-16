@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>{{ card.title }} - DevDiary</title>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo-link">
+        <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="logo" width="40" height="40">
+        <span class="logo-text">DevDiary</span>
+    </a>
+  </header>
+  <main class="main-detail">
+    <div class="main__block">
+      <h1 class="main__title detail-title">{{ card.title }}</h1>
+      <h2 class="main__subtitle">{{ card.subtitle }}</h2>
+      
+      <div class="main__text">
+        {{ card.text }}
+      </div>
+      
+      <a class="main__link" href="/">← Volver al inicio</a>
+    </div>
+  </main>
+</body>
+</html>
